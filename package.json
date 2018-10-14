@@ -18,12 +18,7 @@
     "lint-staged:js": "eslint --ext .js",
     "test": "umi test",
     "test:component": "umi test ./src/components",
-    "test:all": "node ./tests/run-tests.js",
-    "prettier": "prettier --write ./src/**/**/**/*",
-    "docker:dev":"docker-compose -f ./docker/docker-compose.dev.yml up",
-    "docker:build":"docker-compose -f ./docker/docker-compose.dev.yml build",
-    "docker-prod:dev":"docker-compose -f ./docker/docker-compose.yml up",
-    "docker-prod:build":"docker-compose -f ./docker/docker-compose.yml build"
+    "test:all": "node ./tests/run-tests.js"
   },
   "dependencies": {
     "@antv/data-set": "^0.9.6",

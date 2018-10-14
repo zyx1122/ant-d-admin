@@ -17,14 +17,8 @@ export default class SelectLang extends PureComponent {
         <Menu.Item key="zh-CN">
           <FormattedMessage id="lang.simplified-chinese" />
         </Menu.Item>
-        <Menu.Item key="zh-TW">
-          <FormattedMessage id="lang.traditional-chinese" />
-        </Menu.Item>
         <Menu.Item key="en-US">
           <FormattedMessage id="lang.english" />
-        </Menu.Item>
-        <Menu.Item key="pt-BR">
-          <FormattedMessage id="lang.portuguese" />
         </Menu.Item>
       </Menu>
     );

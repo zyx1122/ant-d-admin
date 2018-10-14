@@ -25,24 +25,17 @@ export default {
         dynamicImport: {
           loadingComponent: './components/PageLoading/index',
         },
-        ...(!process.env.TEST && os.platform() === 'darwin'
-          ? {
-              dll: {
-                include: ['dva', 'dva/router', 'dva/saga', 'dva/fetch'],
-                exclude: ['@babel/runtime'],
-              },
-              hardSource: true,
-            }
-          : {}),
+        ...(!process.env.TEST && os.platform() === 'darwin' ?
+          {
+            dll: {
+              include: ['dva', 'dva/router', 'dva/saga', 'dva/fetch'],
+              exclude: ['@babel/runtime'],
+            },
+            hardSource: true,
+          } :
+          {}),
       },
-    ],
-    [
-      'umi-plugin-ga',
-      {
-        code: 'UA-72788897-6',
-        judge: () => process.env.APP_TYPE === 'site',
-      },
-    ],
+    ]
   ],
   targets: {
     ie: 11,
@@ -100,13 +93,11 @@ export default {
     description: 'An out-of-box UI solution for enterprise applications as a React boilerplate.',
     display: 'standalone',
     start_url: '/index.html',
-    icons: [
-      {
-        src: '/favicon.png',
-        sizes: '48x48',
-        type: 'image/png',
-      },
-    ],
+    icons: [{
+      src: '/favicon.png',
+      sizes: '48x48',
+      type: 'image/png',
+    }, ],
   },
 
   chainWebpack: webpackPlugin,
